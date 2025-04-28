@@ -1,0 +1,56 @@
+body {
+    font-family: "Inter";
+    background-color: #fff;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.logo a {
+    color: #1A56DB;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav_list .nav_item a {
+    color: #4B5563;
+    transition: 0.5s ease;
+    padding: 10px;
+}
+
+.nav_list .nav_item a:hover {
+    color: #1A56DB;
+}
+
+.lang_list {
+    display: flex;
+    background-color: #F3F4F6;
+    border-radius: 999px;
+}
+
+.lang_list .lang_item a {
+    padding: 8px 15px;
+    color: #4B5563;
+    transition: 0.5s ease;
+}
+
+.lang_list .lang_item a:hover {
+    color: #1A56DB;
+}
+
+.lang_list .lang_item:not(:last-child) {
+    border-right: 2px solid #D1D5DB;
+}
