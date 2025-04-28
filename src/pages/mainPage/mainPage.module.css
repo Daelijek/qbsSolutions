@@ -149,3 +149,24 @@
         }
     }
 }
+
+.fifth_block {
+    .fifth_block_inner {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 100px 0;
+
+        .title {
+            font-weight: 700;
+            font-size: 36px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

@@ -4,6 +4,7 @@ import Footer from "../../footer/footer";
 import Card from "./mainPageCard1/card";
 import Card2 from "./card2/card2";
 import NewsCard from "./newsCards/newsCard";
+import ProjectCards from "./projectCards/projectCards";
 
 function MainPage() {
     return (
@@ -63,9 +64,22 @@ function MainPage() {
             <div className={styles.fifth_block}>
                 <div className={styles.fifth_block_inner}>
                     <div className={styles.title}>Последние новости</div>
-                    <NewsCard imgSrc='/public/mainPage_4.png' date="15 марта 2024" title="Новый портал открытых данных" description="Запущена обновленная версия портала с расширенными возможностями анализа данных." />
-                    <NewsCard imgSrc='/public/mainPage_5.png' date="12 марта 2024" title="Международное сотрудничество" description="Казахстан присоединился к международной инициативе по открытым данным." />
-                    <NewsCard imgSrc='/public/mainPage_6.png' date="10 марта 2024" title="Форум Open Data" description="В Астане прошел ежегодный форум по открытым данным и инновациям." />
+                    <div className={styles.cards}>
+                        <NewsCard imgSrc='/public/mainPage_4.png' date="15 марта 2024" title="Новый портал открытых данных" description="Запущена обновленная версия портала с расширенными возможностями анализа данных." />
+                        <NewsCard imgSrc='/public/mainPage_5.png' date="12 марта 2024" title="Международное сотрудничество" description="Казахстан присоединился к международной инициативе по открытым данным." />
+                        <NewsCard imgSrc='/public/mainPage_6.png' date="10 марта 2024" title="Форум Open Data" description="В Астане прошел ежегодный форум по открытым данным и инновациям." />
+                    </div>
+                </div>
+            </div>
+
+            <div className={styles.sixth_block}>
+                <div className={styles.sixth_block_inner}>
+                    <div className={styles.title}>Текущие проекты</div>
+                    <div className={styles.cards}>
+                        <ProjectCards imgSrc='/public/mp_Card9.svg' title="Бюджетный портал" status="В разработке" />
+                        <ProjectCards imgSrc='/public/mp_Card10.svg' title="Экологический мониторинг" status="Активный" />
+                        <ProjectCards imgSrc='/public/mp_Card11.svg' title="Открытые НПА" status="Завершен" />
+                    </div>
                 </div>
             </div>
             <Footer></Footer>
