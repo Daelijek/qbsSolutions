@@ -1,0 +1,31 @@
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 28%;
+    box-shadow: #e5e5e5 1px 1px 10px;
+
+    .card_inner {
+        text-align: left;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        img {
+            width: 70px;
+            background-color: #EFF6FF;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .title {
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .description {
+            font-weight: 400;
+            color: #4B5563;
+        }
+    }
+}
