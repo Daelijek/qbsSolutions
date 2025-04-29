@@ -76,9 +76,24 @@ function MainPage() {
                 <div className={styles.sixth_block_inner}>
                     <div className={styles.title}>Текущие проекты</div>
                     <div className={styles.cards}>
-                        <ProjectCards imgSrc='/public/mp_Card9.svg' title="Бюджетный портал" status="В разработке" />
-                        <ProjectCards imgSrc='/public/mp_Card10.svg' title="Экологический мониторинг" status="Активный" />
-                        <ProjectCards imgSrc='/public/mp_Card11.svg' title="Открытые НПА" status="Завершен" />
+                        <ProjectCards
+                            imgSrc='/public/mp_Card9.svg'
+                            title="Бюджетный портал"
+                            status="В разработке"
+                            description="Визуализация и анализ государственного бюджета"
+                            progress="70%" />
+                        <ProjectCards
+                            imgSrc='/public/mp_Card10.svg'
+                            title="Экологический мониторинг"
+                            status="Активный"
+                            description="Система мониторинга экологических показателей"
+                            progress="90%" />
+                        <ProjectCards
+                            imgSrc='/public/mp_Card11.svg'
+                            title="Открытые НПА"
+                            status="Завершен"
+                            description="Публичное обсуждение нормативных актов"
+                            progress="100%" />
                     </div>
                 </div>
             </div>
@@ -88,5 +103,3 @@ function MainPage() {
 }
 
 export default MainPage;
-
-// {styles.}

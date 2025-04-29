@@ -1,21 +1,22 @@
-import styles from './header.module.css'
+import styles from './header.module.css';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <header>
-        <div className={styles.logo}>
-          <a className={styles.logo_link} href="">OpenGov.kz</a>
-        </div>
-        
-        <nav className={styles.nav}>
-          <ul className={styles.nav_list}>
-            <li className={styles.nav_item}><a href="">Главная</a></li>
-            <li className={styles.nav_item}><a href="">О нас</a></li>
-            <li className={styles.nav_item}><a href="">Новости</a></li>
-            <li className={styles.nav_item}><a href="">Участники сообщества</a></li>
-            <li className={styles.nav_item}><a href="">Проекты</a></li>
-          </ul>
-        </nav>
+      <div className={styles.logo}>
+        <a className={styles.logo_link} href="">OpenGov.kz</a>
+      </div>
+
+      <nav className={styles.nav}>
+        <ul className={styles.nav_list}>
+          <li className={styles.nav_item}><Link to="/">Главная</Link></li>
+          <li className={styles.nav_item}><Link to="/aboutMe">О нас</Link></li>
+          <li className={styles.nav_item}><Link to="/news">Новости</Link></li>
+          <li className={styles.nav_item}><Link to="/members">Участники сообщества</Link></li>
+          <li className={styles.nav_item}><Link to="/projects">Проекты</Link></li>
+        </ul>
+      </nav>
 
       <ul className={styles.lang_list}>
         <li className={styles.lang_item}><a href="">РУС</a></li>
