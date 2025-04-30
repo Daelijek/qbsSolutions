@@ -3,6 +3,9 @@ import "./reset.css"
 import MainPage from "./pages/mainPage/mainPage";
 import AboutPage from './pages/aboutPage/aboutPage';
 import NewsPage from './pages/newsPage/newsPage';
+import ProjectsPage from './pages/projectsPage/projectsPage';
+import MembersPage from './pages/membersPage/membersPage';
+import NewsDetail from './pages/newsPage/newsDetail/newsDetail';
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
           <Route path='/' element={<MainPage />} />
           <Route path='/aboutMe' element={<AboutPage />} />
           <Route path='/news' element={<NewsPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/members" element={<MembersPage />} />
+          <Route path="/newsDetail" element={<NewsDetail />} />
         </Routes>
       </Router>
     </>

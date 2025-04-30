@@ -5,6 +5,9 @@ import Card from "./mainPageCard1/card";
 import Card2 from "./card2/card2";
 import NewsCard from "./newsCards/newsCard";
 import ProjectCards from "./projectCards/projectCards";
+import { Link } from 'react-router-dom';
+import NewsDetail from "../newsPage/newsDetail/newsDetail";
+
 
 function MainPage() {
     return (
@@ -15,7 +18,7 @@ function MainPage() {
                     <div className={styles.group}>
                         <div className={styles.title}>Открытое государство в Казахстане — прозрачность, доступность, участие.</div>
                         <div className={styles.description}>Мы верим в общественное участие, открытые данные и доступную государственную информацию для лучшего будущего Казахстана.</div>
-                        <button className={styles.more_button}>Узнать больше</button>
+                        <Link to="/aboutMe"><button className={styles.more_button}> Узнать больше</button></Link>
                     </div>
                     <img src="/public/mainPage_1.png" alt="" />
                 </div>
@@ -65,9 +68,9 @@ function MainPage() {
                 <div className={styles.fifth_block_inner}>
                     <div className={styles.title}>Последние новости</div>
                     <div className={styles.cards}>
-                        <NewsCard imgSrc='/public/mainPage_4.png' date="15 марта 2024" title="Новый портал открытых данных" description="Запущена обновленная версия портала с расширенными возможностями анализа данных." />
-                        <NewsCard imgSrc='/public/mainPage_5.png' date="12 марта 2024" title="Международное сотрудничество" description="Казахстан присоединился к международной инициативе по открытым данным." />
-                        <NewsCard imgSrc='/public/mainPage_6.png' date="10 марта 2024" title="Форум Open Data" description="В Астане прошел ежегодный форум по открытым данным и инновациям." />
+                        <NewsCard imgSrc='/public/mainPage_4.png' date="15 марта 2024" title="Новый портал открытых данных" description="Запущена обновленная версия портала с расширенными возможностями анализа данных." link="/newsDetail" />
+                        <NewsCard imgSrc='/public/mainPage_5.png' date="12 марта 2024" title="Международное сотрудничество" description="Казахстан присоединился к международной инициативе по открытым данным." link="/newsDetail" />
+                        <NewsCard imgSrc='/public/mainPage_6.png' date="10 марта 2024" title="Форум Open Data" description="В Астане прошел ежегодный форум по открытым данным и инновациям." link="/newsDetail" />
                     </div>
                 </div>
             </div>
