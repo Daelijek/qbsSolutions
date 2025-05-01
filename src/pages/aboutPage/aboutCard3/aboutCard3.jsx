@@ -1,4 +1,5 @@
 import styles from "./aboutCard3.module.css";
+import { Link } from "react-router-dom";
 
 function AboutCard3(props) {
     return (
@@ -8,7 +9,7 @@ function AboutCard3(props) {
                 <div className={styles.tag}>{props.tag}</div>
                 <div className={styles.title}>{props.title}</div>
                 <div className={styles.description}>{props.description}</div>
-                <div className={styles.more}>Подробнее</div>
+                <Link to={props.link} className={styles.more}>Подробнее</Link>
             </div>
 
         </div>

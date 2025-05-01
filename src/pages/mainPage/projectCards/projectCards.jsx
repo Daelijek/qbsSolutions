@@ -1,4 +1,5 @@
 import styles from "./projectCards.module.css";
+import { Link } from "react-router-dom";
 
 function ProjectCards(props) {
     const isCompleted = props.status.toLowerCase() === "завершен";
@@ -35,11 +36,13 @@ function ProjectCards(props) {
                     <div className={styles.progressText}>{props.progress}</div>
                 </div>
 
-                <div className={styles.more}>
-                    <a href="">Подробнее о проекте</a>
-                </div>
+                <Link to={props.link}>
+                    <div className={styles.more}>
+                        Подробнее о проекте
+                    </div>
+                </Link>
             </div>
-        </div>
+        </div >
     );
 }
 

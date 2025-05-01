@@ -84,19 +84,22 @@ function MainPage() {
                             title="Бюджетный портал"
                             status="В разработке"
                             description="Визуализация и анализ государственного бюджета"
-                            progress="70%" />
+                            progress="70%"
+                            link="/projectDetail" />
                         <ProjectCards
                             imgSrc='/mp_Card10.svg'
                             title="Экологический мониторинг"
                             status="Активный"
                             description="Система мониторинга экологических показателей"
-                            progress="90%" />
+                            progress="90%"
+                            link="/projectDetail" />
                         <ProjectCards
                             imgSrc='/mp_Card11.svg'
                             title="Открытые НПА"
                             status="Завершен"
                             description="Публичное обсуждение нормативных актов"
-                            progress="100%" />
+                            progress="100%"
+                            link="/projectDetail" />
                     </div>
                 </div>
             </div>

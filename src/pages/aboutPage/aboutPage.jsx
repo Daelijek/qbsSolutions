@@ -122,22 +122,26 @@ function AboutPage() {
                             imgSrc="/ap_Card4.png"
                             tag="Данные"
                             title="Открытые базы данных"
-                            description="Создание общедоступных информационных ресурсов" />
+                            description="Создание общедоступных информационных ресурсов"
+                            link="/projectDetail" />
                         <AboutCard3
                             imgSrc="/ap_Card5.png"
                             tag="Образование"
                             title="Цифровые школы"
-                            description="Анализ образовательных данных для улучшения качества обучения" />
+                            description="Анализ образовательных данных для улучшения качества обучения"
+                            link="/projectDetail" />
                         <AboutCard3
                             imgSrc="/ap_Card6.png"
                             tag="Бизнес"
                             title="Развитие предпринимательства"
-                            description="Использование открытых данных для развития малого и среднего бизнеса" />
+                            description="Использование открытых данных для развития малого и среднего бизнеса"
+                            link="/projectDetail" />
                         <AboutCard3
                             imgSrc="/ap_Card7.png"
                             tag="Экология"
                             title="Мониторинг окружающей среды"
-                            description="Анализ экологических данных для улучшения качества воздуха" />
+                            description="Анализ экологических данных для улучшения качества воздуха"
+                            link="/projectDetail" />
                     </div>
                 </div>
             </div>
