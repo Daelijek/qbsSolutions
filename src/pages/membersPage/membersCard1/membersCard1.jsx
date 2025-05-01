@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./membersCard1.module.css"
 
 function MembersCard1(props) {
@@ -8,7 +9,7 @@ function MembersCard1(props) {
                 <div className={styles.profession}>{props.profession}</div>
                 <div className={styles.description}>{props.description}</div>
                 <div className={styles.tag}>{props.tag}</div>
-                <div className={styles.more}>Подробнее</div>
+                <Link to={props.link} className={styles.more}>Подробнее</Link>
         </div>
     );
 }

@@ -5,7 +5,7 @@ function Header() {
   return (
     <header>
       <div className={styles.logo}>
-        <a className={styles.logo_link} href="">OpenGov.kz</a>
+        <div className={styles.logo_link}>OpenGov.kz</div>
       </div>
 
       <nav className={styles.nav}>

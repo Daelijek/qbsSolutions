@@ -103,6 +103,7 @@ function MembersPage() {
                                 profession={member.profession}
                                 description={member.description}
                                 tag={member.tag}
+                                link={member.link}
                             />
                         ))}
                     </div>

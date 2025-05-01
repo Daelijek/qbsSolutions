@@ -5,125 +5,143 @@ const membersData = [
         profession: "Разработчик",
         description: "Специалист по работе с открытыми данными и API. Участвует в проектах по цифровизации государственных услуг.",
         tag: "Frontend",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card3.png",
         name: "Айгерим Турсунова",
         profession: "Аналитик",
         description: "Эксперт по анализу данных и статистическим методам в сфере открытых данных.",
         tag: "Data Analysis",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card2.png",
         name: "Сергей Иванов",
         profession: "Исследователь",
         description: "Занимается исследованием и оценкой проектов по открытым данным в различных областях.",
         tag: "Research",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card4.png",
         name: "Динара Султанова",
         profession: "Разработчик",
         description: "Разработчик программного обеспечения, работающий с публичными API и сервисами для открытых данных.",
         tag: "Backend",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card2.png",
         name: "Марат Нурбаев",
         profession: "Аналитик",
         description: "Аналитик, занимающийся обработкой и анализом открытых данных для государственного сектора.",
         tag: "Data Science",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card3.png",
         name: "Ирина Соловьева",
         profession: "Исследователь",
         description: "Проводит исследования в области использования открытых данных в социальных проектах.",
         tag: "Social Projects",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card3.png",
         name: "Ирина Соловьева",
         profession: "Исследователь",
         description: "Проводит исследования в области использования открытых данных в социальных проектах.",
         tag: "Social Projects",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card3.png",
         name: "Ирина Соловьева",
         profession: "Исследователь",
         description: "Проводит исследования в области использования открытых данных в социальных проектах.",
         tag: "Social Projects",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card3.png",
         name: "Ирина Соловьева",
         profession: "Исследователь",
         description: "Проводит исследования в области использования открытых данных в социальных проектах.",
         tag: "Social Projects",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card3.png",
         name: "Ирина Соловьева",
         profession: "Исследователь",
         description: "Проводит исследования в области использования открытых данных в социальных проектах.",
         tag: "Social Projects",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card3.png",
         name: "Ирина Соловьева",
         profession: "Исследователь",
         description: "Проводит исследования в области использования открытых данных в социальных проектах.",
         tag: "Social Projects",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card3.png",
         name: "Ирина Соловьева",
         profession: "Исследователь",
         description: "Проводит исследования в области использования открытых данных в социальных проектах.",
         tag: "Social Projects",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card2.png",
         name: "Марат Нурбаев",
         profession: "Аналитик",
         description: "Аналитик, занимающийся обработкой и анализом открытых данных для государственного сектора.",
         tag: "Data Science",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card2.png",
         name: "Марат Нурбаев",
         profession: "Аналитик",
         description: "Аналитик, занимающийся обработкой и анализом открытых данных для государственного сектора.",
         tag: "Data Science",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card2.png",
         name: "Марат Нурбаев",
         profession: "Аналитик",
         description: "Аналитик, занимающийся обработкой и анализом открытых данных для государственного сектора.",
         tag: "Data Science",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card2.png",
         name: "Марат Нурбаев",
         profession: "Аналитик",
         description: "Аналитик, занимающийся обработкой и анализом открытых данных для государственного сектора.",
         tag: "Data Science",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card2.png",
         name: "Марат Нурбаев",
         profession: "Аналитик",
         description: "Аналитик, занимающийся обработкой и анализом открытых данных для государственного сектора.",
         tag: "Data Science",
+        link: "/membersDetail"
     },
     {
-        imgSrc: "/membersp_Card1.png",
+        imgSrc: "/membersp_Card2.png",
         name: "Марат Нурбаев",
         profession: "Аналитик",
         description: "Аналитик, занимающийся обработкой и анализом открытых данных для государственного сектора.",
         tag: "Data Science",
+        link: "/membersDetail"
     },
     // Добавьте других участников
 ];
