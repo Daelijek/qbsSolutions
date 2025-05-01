@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./projectsCard1.module.css";
 
 function ProjectsCard1(props) {
@@ -11,7 +12,7 @@ function ProjectsCard1(props) {
                     <div className={styles.date}><img src="/public/mp_Card8.svg" alt="" />{props.date}</div>
                 </div>
                 <div className={styles.tag}>{props.tag}</div>
-                <div className={styles.more}><a href="">Подробнее</a></div>
+                <Link to={props.link}><div className={styles.more}>Подробнее</div></Link>
             </div>
         </div>
     );

@@ -14,10 +14,10 @@ function Footer() {
               Развитие открытого государства в Казахстане
             </div>
             <div className={styles.soc_media}>
-              <img src="/public/twitter.svg" alt="twitter" />
-              <img src="/public/facebook.svg" alt="facebook" />
-              <img src="/public/linkedIn.svg" alt="linkedIn" />
-              <img src="/public/youtube.svg" alt="youtube" />
+              <img src="/twitter.svg" alt="twitter" />
+              <img src="/facebook.svg" alt="facebook" />
+              <img src="/linkedIn.svg" alt="linkedIn" />
+              <img src="/youtube.svg" alt="youtube" />
             </div>
           </div>
 
@@ -52,7 +52,7 @@ function Footer() {
             <div className={styles.title}>Подписаться на новости</div>
             <div className={styles.user_ineraction}>
               <input type="text" placeholder='Ваш email' />
-              <button><img src="/public/mail.svg" alt="" /></button>
+              <button><img src="/mail.svg" alt="" /></button>
             </div>
           </div>
         </div>

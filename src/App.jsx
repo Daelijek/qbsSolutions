@@ -6,6 +6,7 @@ import NewsPage from './pages/newsPage/newsPage';
 import ProjectsPage from './pages/projectsPage/projectsPage';
 import MembersPage from './pages/membersPage/membersPage';
 import NewsDetail from './pages/newsPage/newsDetail/newsDetail';
+import ProjectDetailPage from './pages/projectsPage/projectsDetailPage/projectDetailPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/members" element={<MembersPage />} />
           <Route path="/newsDetail" element={<NewsDetail />} />
+          <Route path="/projectDetail" element={<ProjectDetailPage />} />
         </Routes>
       </Router>
     </>

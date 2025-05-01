@@ -99,6 +99,7 @@ function ProjectsPage() {
                                 description={project.description}
                                 date={project.date}
                                 tag={project.tag}
+                                link={project.link}
                             />
                         ))}
                     </div>
