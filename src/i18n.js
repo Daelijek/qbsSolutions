@@ -25,6 +25,22 @@ import projectDetailPage_ru from './locales/ru/projectDetailPage.json';
 import projectDetailPage_kz from './locales/kz/projectDetailPage.json';
 import projectDetailPage_en from './locales/en/projectDetailPage.json';
 
+import membersDetailPage_ru from './locales/ru/membersDetailPage.json';
+import membersDetailPage_kz from './locales/kz/membersDetailPage.json';
+import membersDetailPage_en from './locales/en/membersDetailPage.json';
+
+import newsPage_ru from './locales/ru/newsPage.json';
+import newsPage_kz from './locales/kz/newsPage.json';
+import newsPage_en from './locales/en/newsPage.json';
+
+import projectsPage_ru from './locales/ru/projectsPage.json';
+import projectsPage_kz from './locales/kz/projectsPage.json';
+import projectsPage_en from './locales/en/projectsPage.json';
+
+import membersPage_ru from './locales/ru/membersPage.json';
+import membersPage_kz from './locales/kz/membersPage.json';
+import membersPage_en from './locales/en/membersPage.json';
+
 i18n
     .use(initReactI18next)
     .init({
@@ -36,6 +52,10 @@ i18n
                 aboutPage: aboutPage_ru,
                 newsDetail: newsDetail_ru,
                 projectDetailPage: projectDetailPage_ru,
+                membersDetailPage: membersDetailPage_ru,
+                newsPage: newsPage_ru,
+                projectsPage: projectsPage_ru,
+                membersPage: membersPage_ru,
             },
             kz: {
                 header: header_kz,
@@ -44,6 +64,10 @@ i18n
                 aboutPage: aboutPage_kz,
                 newsDetail: newsDetail_kz,
                 projectDetailPage: projectDetailPage_kz,
+                membersDetailPage: membersDetailPage_kz,
+                newsPage: newsPage_kz,
+                projectsPage: projectsPage_kz,
+                membersPage: membersPage_kz,
             },
             en: {
                 header: header_en,
@@ -52,11 +76,15 @@ i18n
                 aboutPage: aboutPage_en,
                 newsDetail: newsDetail_en,
                 projectDetailPage: projectDetailPage_en,
+                membersDetailPage: membersDetailPage_en,
+                newsPage: newsPage_en,
+                projectsPage: projectsPage_en,
+                membersPage: membersPage_en,
             },
         },
         lng: 'ru', // язык по умолчанию
         fallbackLng: 'ru',
-        ns: ['header', 'mainPage, footer, aboutPage, newsDetail, projectDetailPage'], // список всех используемых неймспейсов
+        ns: ['header', 'mainPage', 'footer', 'aboutPage', 'newsDetail', 'projectDetailPage', 'membersDetailPage', 'newsPage', 'projectsPage', 'membersPage'], // список всех используемых неймспейсов
         defaultNS: 'header', // по умолчанию будет использоваться header, если не указан явно
         interpolation: {
             escapeValue: false,

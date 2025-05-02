@@ -4,47 +4,58 @@ import Header from "../../header/header";
 import Footer from "../../footer/footer";
 import ProjectsCard1 from "./projectsCard1/projectsCard1";
 import projectsData from "../../data/projectsData";
+import { useTranslation } from "react-i18next";
 
 function ProjectsPage() {
+    const { t, i18n } = useTranslation("projectsPage");
+    const lang = i18n.language;
 
     const itemsPerPage = 6;
     const [currentPage, setCurrentPage] = useState(1);
-    const [searchTerm, setSearchTerm] = useState(""); // state for search
-    const [selectedCategory, setSelectedCategory] = useState(""); // state for category filter
+    const [searchTerm, setSearchTerm] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState("");
 
-    const totalPages = Math.ceil(projectsData.length / itemsPerPage);
-    const startIndex = (currentPage - 1) * itemsPerPage;
-
-    // Filter projects based on search term and selected category
+    // Фильтрация
     const filteredProjects = projectsData.filter((project) => {
-        const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            project.description.toLowerCase().includes(searchTerm.toLowerCase());
-        const matchesCategory = selectedCategory ? project.tag === selectedCategory : true;
+        const title = project.title?.[lang]?.toLowerCase() || "";
+        const description = project.description?.[lang]?.toLowerCase() || "";
+        const tagKey = project.tagKey;
+
+        const matchesSearch =
+            title.includes(searchTerm.toLowerCase()) ||
+            description.includes(searchTerm.toLowerCase());
+
+        const matchesCategory = selectedCategory
+            ? selectedCategory === tagKey
+            : true;
+
         return matchesSearch && matchesCategory;
     });
 
+    const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
     const currentProjects = filteredProjects.slice(startIndex, startIndex + itemsPerPage);
 
-    // Update search term
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value);
-        setCurrentPage(1); // Reset to the first page when the search term changes
+        setCurrentPage(1);
     };
 
-    // Update selected category
-    const handleCategoryChange = (category) => {
-        setSelectedCategory(category);
-        setCurrentPage(1); // Reset to the first page when the category changes
+    const handleCategoryChange = (key) => {
+        setSelectedCategory(key);
+        setCurrentPage(1);
     };
+
+    const categoryList = ["finance", "ecology", "transport"];
 
     return (
         <>
             <Header />
             <div className={styles.first_block}>
                 <div className={styles.first_block_inner}>
-                    <div className={styles.title}>Проекты</div>
-                    <div className={styles.description}>Открытые данные — мощный инструмент для изменений. Здесь представлены проекты, которые используют государственные данные для создания новых сервисов, повышения прозрачности и улучшения жизни граждан.</div>
-                    <div className={styles.description}>Изучите проекты, присоединяйтесь к инициативам или предлагайте свои идеи!</div>
+                    <div className={styles.title}>{t("title")}</div>
+                    <div className={styles.description}>{t("description1")}</div>
+                    <div className={styles.description}>{t("description2")}</div>
                 </div>
             </div>
 
@@ -52,37 +63,27 @@ function ProjectsPage() {
                 <div className={styles.second_block_inner}>
                     <input
                         type="text"
-                        placeholder="Поиск проектов"
+                        placeholder={t("searchPlaceholder")}
                         className={styles.searchInput}
                         value={searchTerm}
                         onChange={handleSearchChange}
                     />
 
                     <div className={styles.filters}>
+                        {categoryList.map((key) => (
+                            <button
+                                key={key}
+                                className={styles.filterButton}
+                                onClick={() => handleCategoryChange(key)}
+                            >
+                                {t(`categories.${key}`)}
+                            </button>
+                        ))}
                         <button
                             className={styles.filterButton}
-                            onClick={() => handleCategoryChange("Финансы")}
+                            onClick={() => handleCategoryChange("")}
                         >
-                            Финансы
-                        </button>
-                        <button
-                            className={styles.filterButton}
-                            onClick={() => handleCategoryChange("Экология")}
-                        >
-                            Экология
-                        </button>
-                        <button
-                            className={styles.filterButton}
-                            onClick={() => handleCategoryChange("Транспорт")}
-                        >
-                            Транспорт
-                        </button>
-                        {/* Add more categories here */}
-                        <button
-                            className={styles.filterButton}
-                            onClick={() => handleCategoryChange("")} // Reset filter
-                        >
-                            Все категории
+                            {t("categories.all")}
                         </button>
                     </div>
                 </div>
@@ -95,10 +96,10 @@ function ProjectsPage() {
                             <ProjectsCard1
                                 key={index}
                                 imgSrc={project.imgSrc}
-                                title={project.title}
-                                description={project.description}
-                                date={project.date}
-                                tag={project.tag}
+                                title={project.title[lang]}
+                                description={project.description[lang]}
+                                date={project.date[lang]}
+                                tag={project.tag[lang]}
                                 link={project.link}
                             />
                         ))}
@@ -107,7 +108,7 @@ function ProjectsPage() {
                         {Array.from({ length: totalPages }, (_, i) => (
                             <button
                                 key={i}
-                                className={`${styles.pageButton} ${currentPage === i + 1 ? styles.active : ''}`}
+                                className={`${styles.pageButton} ${currentPage === i + 1 ? styles.active : ""}`}
                                 onClick={() => setCurrentPage(i + 1)}
                             >
                                 {i + 1}

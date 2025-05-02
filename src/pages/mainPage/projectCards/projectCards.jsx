@@ -1,7 +1,10 @@
 import styles from "./projectCards.module.css";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 
 function ProjectCards(props) {
+    const { t } = useTranslation("newsPage");
     const isCompleted = props.status.toLowerCase() === "завершен";
 
     // Проверка и безопасное превращение "70%" в число 70
@@ -37,9 +40,7 @@ function ProjectCards(props) {
                 </div>
 
                 <Link to={props.link}>
-                    <div className={styles.more}>
-                        Подробнее о проекте
-                    </div>
+                    <div className={styles.moreProject}>{t("more")}</div>
                 </Link>
             </div>
         </div >
