@@ -5,7 +5,8 @@ import styles from './header.module.css';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const { t, i18n } = useTranslation('header'); // 👈 указываем namespace
+  const { t, i18n } = useTranslation('header');
+  const currentLang = i18n.language;
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -34,10 +35,23 @@ function Header() {
           <li className={styles.nav_item}><Link to="/members" onClick={toggleMenu}>{t('members')}</Link></li>
           <li className={styles.nav_item}><Link to="/projects" onClick={toggleMenu}>{t('projects')}</Link></li>
         </ul>
+
         <ul className={styles.lang_list}>
-          <li className={styles.lang_item}><button onClick={() => changeLanguage('ru')}>РУС</button></li>
-          <li className={styles.lang_item}><button onClick={() => changeLanguage('kz')}>ҚАЗ</button></li>
-          <li className={styles.lang_item}><button onClick={() => changeLanguage('en')}>ENG</button></li>
+          <li
+            className={`${styles.lang_item} ${currentLang === 'ru' ? styles.active : ''}`}
+          >
+            <button onClick={() => changeLanguage('ru')}>РУС</button>
+          </li>
+          <li
+            className={`${styles.lang_item} ${currentLang === 'kz' ? styles.active : ''}`}
+          >
+            <button onClick={() => changeLanguage('kz')}>ҚАЗ</button>
+          </li>
+          <li
+            className={`${styles.lang_item} ${currentLang === 'en' ? styles.active : ''}`}
+          >
+            <button onClick={() => changeLanguage('en')}>ENG</button>
+          </li>
         </ul>
       </nav>
     </header>

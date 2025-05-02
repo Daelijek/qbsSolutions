@@ -54,11 +54,18 @@ header {
 .lang_list .lang_item {
   padding: 8px 15px;
   color: #4B5563;
-  transition: 0.5s ease;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .lang_list .lang_item:hover {
   color: #1A56DB;
+}
+
+.lang_list .lang_item.active {
+  color: #ffffff;
+  background-color: #1A56DB;
+  border-radius: 999px;
 }
 
 .lang_list .lang_item:not(:last-child) {
