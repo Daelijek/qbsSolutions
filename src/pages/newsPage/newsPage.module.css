@@ -106,3 +106,80 @@
     background-color: #1A56DB;
     color: #ffffff;
 }
+
+/* Планшеты: до 1024px */
+@media (max-width: 1024px) {
+    .second_block_inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .third_block .cards {
+        justify-content: center;
+    }
+}
+
+/* Мобильные устройства: до 768px */
+@media (max-width: 768px) {
+    .first_block .first_block_inner {
+        padding: 0 20px;
+    }
+
+    .first_block .title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .first_block .description {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .second_block_inner {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .searchInput {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .filters {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .filterButton {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .third_block .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .third_block .pagination {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 30px;
+    }
+
+    .third_block .pageButton {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+}

@@ -117,3 +117,62 @@ footer {
     border-top: 1px solid #1F2937;
     align-items: center;
 }
+
+/* Планшеты: ширина до 1024px */
+@media (max-width: 1024px) {
+    .upper_footer {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .first_col,
+    .second_col,
+    .third_col,
+    .fourth_col {
+        flex: 1 1 45%;
+    }
+
+    .fourth_col {
+        align-items: flex-start;
+    }
+}
+
+/* Мобильные устройства: ширина до 768px */
+@media (max-width: 768px) {
+    .upper_footer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .first_col,
+    .second_col,
+    .third_col,
+    .fourth_col {
+        width: 100%;
+    }
+
+    .user_ineraction {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .user_ineraction input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .user_ineraction button {
+        width: 100%;
+    }
+
+    .lower_footer {
+        padding: 0 20px;
+    }
+}

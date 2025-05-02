@@ -8,11 +8,13 @@ import MembersPage from './pages/membersPage/membersPage';
 import NewsDetail from './pages/newsPage/newsDetail/newsDetail';
 import ProjectDetailPage from './pages/projectsPage/projectsDetailPage/projectDetailPage';
 import MembersDetailPage from './pages/membersPage/membersDetailPage/membersDetailPage';
+import ScrollToTop from './scrollTop/scrollToTop';
 
 function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<MainPage />} />
           <Route path='/aboutMe' element={<AboutPage />} />

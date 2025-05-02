@@ -118,3 +118,91 @@
     background-color: #1A56DB;
     color: #ffffff;
 }
+
+/* Планшеты: до 1024px */
+@media (max-width: 1024px) {
+    .first_block_inner {
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .first_block .title {
+        font-size: 36px;
+    }
+
+    .first_block .description {
+        font-size: 16px;
+    }
+
+    .second_block_inner {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .second_block .filters {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .third_block .cards {
+        justify-content: center;
+    }
+}
+
+/* Мобильные устройства: до 768px */
+@media (max-width: 768px) {
+    .first_block_inner {
+        padding: 60px 20px;
+        gap: 16px;
+    }
+
+    .first_block .title {
+        font-size: 28px;
+    }
+
+    .first_block .description {
+        font-size: 14px;
+    }
+
+    .second_block_inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .second_block .searchInput {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .second_block .filters {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .second_block .filterButton {
+        width: 100%;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .third_block .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .third_block .pagination {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 30px;
+    }
+
+    .third_block .pageButton {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+}
