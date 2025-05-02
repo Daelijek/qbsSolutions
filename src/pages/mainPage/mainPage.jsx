@@ -6,19 +6,19 @@ import Card2 from "./card2/card2";
 import NewsCard from "./newsCards/newsCard";
 import ProjectCards from "./projectCards/projectCards";
 import { Link } from 'react-router-dom';
-import NewsDetail from "../newsPage/newsDetail/newsDetail";
-
+import { useTranslation } from 'react-i18next';
 
 function MainPage() {
+    const { t } = useTranslation('mainPage'); // 👈 указываем namespace
     return (
         <>
-            <Header></Header>
+            <Header />
             <div className={styles.first_block}>
                 <div className={styles.first_block_inner}>
                     <div className={styles.group}>
-                        <div className={styles.title}>Открытое государство в Казахстане — прозрачность, доступность, участие.</div>
-                        <div className={styles.description}>Мы верим в общественное участие, открытые данные и доступную государственную информацию для лучшего будущего Казахстана.</div>
-                        <Link to="/aboutMe"><button className={styles.more_button}> Узнать больше</button></Link>
+                        <div className={styles.title}>{t('mainPage.title1')}</div>
+                        <div className={styles.description}>{t('mainPage.description1')}</div>
+                        <Link to="/aboutMe"><button className={styles.more_button}>{t('mainPage.learnMore')}</button></Link>
                     </div>
                     <img src="/mainPage_1.png" alt="" />
                 </div>
@@ -26,12 +26,12 @@ function MainPage() {
 
             <div className={styles.second_block}>
                 <div className={styles.second_block_inner}>
-                    <div className={styles.title}>Что такое Открытое государство?</div>
-                    <div className={styles.description}>Открытое государство — это концепция, при которой государственные данные, решения и процессы максимально доступны гражданам.</div>
+                    <div className={styles.title}>{t('mainPage.title2')}</div>
+                    <div className={styles.description}>{t('mainPage.description2')}</div>
                     <div className={styles.cards}>
-                        <Card imgSrc='/mp_Card1.svg' title='Прозрачность' description="Государственные данные и процессы становятся доступными для граждан, обеспечивая подотчетность и открытость." />
-                        <Card imgSrc='/mp_Card2.svg' title='Участие общества' description="Граждане могут активно участвовать в процессе принятия решений и влиять на государственную политику." />
-                        <Card imgSrc='/mp_Card3.svg' title='Сотрудничество' description="Взаимодействие между государством, гражданами и бизнесом для достижения общих целей." />
+                        <Card imgSrc='/mp_Card1.svg' title={t('mainPage.card1.title')} description={t('mainPage.card1.desc')} />
+                        <Card imgSrc='/mp_Card2.svg' title={t('mainPage.card2.title')} description={t('mainPage.card2.desc')} />
+                        <Card imgSrc='/mp_Card3.svg' title={t('mainPage.card3.title')} description={t('mainPage.card3.desc')} />
                     </div>
                 </div>
             </div>
@@ -40,13 +40,13 @@ function MainPage() {
                 <div className={styles.third_block_inner}>
                     <img className={styles.img} src="/mainPage_2.png" alt="" />
                     <div className={styles.group}>
-                        <div className={styles.title}>Что такое открытые данные?</div>
-                        <div className={styles.description}>Открытые данные — это информация, публикуемая государством в свободном доступе, которую можно использовать, анализировать и применять для общественной пользы.</div>
+                        <div className={styles.title}>{t('mainPage.title3')}</div>
+                        <div className={styles.description}>{t('mainPage.description3')}</div>
                         <ul className={styles.list}>
-                            <li className={styles.list_item}><img src="/mainPage_3.svg" alt="" /> Бюджетные данные</li>
-                            <li className={styles.list_item}><img src="/mainPage_3.svg" alt="" /> Транспортная информация</li>
-                            <li className={styles.list_item}><img src="/mainPage_3.svg" alt="" /> Экологические показатели</li>
-                            <li className={styles.list_item}><img src="/mainPage_3.svg" alt="" /> Данные госзакупок</li>
+                            <li className={styles.list_item}><img src="/mainPage_3.svg" alt="" /> {t('mainPage.data1')}</li>
+                            <li className={styles.list_item}><img src="/mainPage_3.svg" alt="" /> {t('mainPage.data2')}</li>
+                            <li className={styles.list_item}><img src="/mainPage_3.svg" alt="" /> {t('mainPage.data3')}</li>
+                            <li className={styles.list_item}><img src="/mainPage_3.svg" alt="" /> {t('mainPage.data4')}</li>
                         </ul>
                     </div>
                 </div>
@@ -54,56 +54,56 @@ function MainPage() {
 
             <div className={styles.fourth_block}>
                 <div className={styles.fourth_block_inner}>
-                    <div className={styles.title}>Как это работает в Казахстане?</div>
+                    <div className={styles.title}>{t('mainPage.title4')}</div>
                     <div className={styles.cards}>
-                        <Card2 imgSrc='/mp_Card4.svg' title='Законодательная база' description="Нормативно-правовые акты, обеспечивающие открытость государственных данных" />
-                        <Card2 imgSrc='/mp_Card5.svg' title="Базы данных" description="Доступ к государственным информационным ресурсам" />
-                        <Card2 imgSrc='/mp_Card6.svg' title="Мониторинг" description="Отслеживание эффективности государственных программ" />
-                        <Card2 imgSrc='/mp_Card7.svg' title="Инновации" description="Развитие новых технологий в государственном управлении" />
+                        <Card2 imgSrc='/mp_Card4.svg' title={t('mainPage.card4.title')} description={t('mainPage.card4.desc')} />
+                        <Card2 imgSrc='/mp_Card5.svg' title={t('mainPage.card5.title')} description={t('mainPage.card5.desc')} />
+                        <Card2 imgSrc='/mp_Card6.svg' title={t('mainPage.card6.title')} description={t('mainPage.card6.desc')} />
+                        <Card2 imgSrc='/mp_Card7.svg' title={t('mainPage.card7.title')} description={t('mainPage.card7.desc')} />
                     </div>
                 </div>
             </div>
 
             <div className={styles.fifth_block}>
                 <div className={styles.fifth_block_inner}>
-                    <div className={styles.title}>Последние новости</div>
+                    <div className={styles.title}>{t('mainPage.newsTitle')}</div>
                     <div className={styles.cards}>
-                        <NewsCard imgSrc='/mainPage_4.png' date="15 марта 2024" title="Новый портал открытых данных" description="Запущена обновленная версия портала с расширенными возможностями анализа данных." link="/newsDetail" />
-                        <NewsCard imgSrc='/mainPage_5.png' date="12 марта 2024" title="Международное сотрудничество" description="Казахстан присоединился к международной инициативе по открытым данным." link="/newsDetail" />
-                        <NewsCard imgSrc='/mainPage_6.png' date="10 марта 2024" title="Форум Open Data" description="В Астане прошел ежегодный форум по открытым данным и инновациям." link="/newsDetail" />
+                        <NewsCard imgSrc='/mainPage_4.png' date="15 марта 2024" title={t('mainPage.news1.title')} description={t('mainPage.news1.desc')} link="/newsDetail" />
+                        <NewsCard imgSrc='/mainPage_5.png' date="12 марта 2024" title={t('mainPage.news2.title')} description={t('mainPage.news2.desc')} link="/newsDetail" />
+                        <NewsCard imgSrc='/mainPage_6.png' date="10 марта 2024" title={t('mainPage.news3.title')} description={t('mainPage.news3.desc')} link="/newsDetail" />
                     </div>
                 </div>
             </div>
 
             <div className={styles.sixth_block}>
                 <div className={styles.sixth_block_inner}>
-                    <div className={styles.title}>Текущие проекты</div>
+                    <div className={styles.title}>{t('mainPage.projectTitle')}</div>
                     <div className={styles.cards}>
                         <ProjectCards
                             imgSrc='/mp_Card9.svg'
-                            title="Бюджетный портал"
-                            status="В разработке"
-                            description="Визуализация и анализ государственного бюджета"
+                            title={t('mainPage.project1.title')}
+                            status={t('mainPage.project1.status')}
+                            description={t('mainPage.project1.desc')}
                             progress="70%"
                             link="/projectDetail" />
                         <ProjectCards
                             imgSrc='/mp_Card10.svg'
-                            title="Экологический мониторинг"
-                            status="Активный"
-                            description="Система мониторинга экологических показателей"
+                            title={t('mainPage.project2.title')}
+                            status={t('mainPage.project2.status')}
+                            description={t('mainPage.project2.desc')}
                             progress="90%"
                             link="/projectDetail" />
                         <ProjectCards
                             imgSrc='/mp_Card11.svg'
-                            title="Открытые НПА"
-                            status="Завершен"
-                            description="Публичное обсуждение нормативных актов"
+                            title={t('mainPage.project3.title')}
+                            status={t('mainPage.project3.status')}
+                            description={t('mainPage.project3.desc')}
                             progress="100%"
                             link="/projectDetail" />
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
+            <Footer />
         </>
     );
 }

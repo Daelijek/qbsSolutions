@@ -52,13 +52,13 @@ body {
     border-radius: 999px;
   }
   
-  .lang_list .lang_item a {
+  .lang_list .lang_item {
     padding: 8px 15px;
     color: #4B5563;
     transition: 0.5s ease;
   }
   
-  .lang_list .lang_item a:hover {
+  .lang_list .lang_item:hover {
     color: #1A56DB;
   }
   

@@ -1,0 +1,35 @@
+{
+    "projectDetailPage": {
+        "title": "Open Data 2.0",
+        "status": "Active",
+        "date": "Implementation Period: January 2024 - December 2024",
+        "description": "The 'Open Data 2.0' project aims to enhance transparency in public governance and the availability of information for the citizens of Kazakhstan. Our goal is to create a unified platform that aggregates government data in machine-readable formats, ensuring more convenient access to information for businesses, researchers, and citizens. The platform will contain various types of data, such as statistics, budgets, tender results, reports on government agencies' activities, as well as data on the social, economic, and environmental situation in the country.",
+        "blueText": "Key project tasks:",
+        "list": [
+            "Development of open data publication standards",
+            "Creation of a unified open data portal",
+            "Training of civil servants in working with open data",
+            "Development of a community of developers and analysts"
+        ],
+        "moreDescription": "We are confident that the project will contribute to improving the transparency and accountability of government structures, as well as help make citizen-government interaction more effective and transparent. The implementation of 'Open Data 2.0' will be an important step in the development of digital government in Kazakhstan, providing citizens with the necessary tools to participate in public life and make informed decisions.",
+        "button1": "Go to the project website",
+        "button2": "GitHub repository",
+        "teamTitle": "Project Team",
+        "similarProjectsTitle": "Similar Projects",
+        "backToProjects": "Back to project list",
+        "similarProjects": [
+            {
+                "title": "E-Gov 2.0",
+                "description": "Modernization of the electronic government portal"
+            },
+            {
+                "title": "Smart City",
+                "description": "Development of smart city technologies"
+            },
+            {
+                "title": "Digital ID",
+                "description": "Digital identification of citizens"
+            }
+        ]
+    }
+}

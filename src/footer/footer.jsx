@@ -1,17 +1,20 @@
-import styles from './footer.module.css'
+import { useTranslation } from 'react-i18next';
+import styles from './footer.module.css';
 import { Link } from 'react-router-dom';
 
 function Footer() {
+  const { t } = useTranslation('footer');
+
   return (
     <footer>
       <div className={styles.footer_inner}>
         <div className={styles.upper_footer}>
           <div className={styles.first_col}>
             <div className={styles.title}>
-              OpenGov.kz
+              {t('footer.openGovTitle')}
             </div>
             <div className={styles.description}>
-              Развитие открытого государства в Казахстане
+              {t('footer.openGovDescription')}
             </div>
             <div className={styles.soc_media}>
               <img src="/twitter.svg" alt="twitter" />
@@ -23,41 +26,45 @@ function Footer() {
 
           <div className={styles.second_col}>
             <div className={styles.title}>
-              Навигация
+              {t('footer.navigation')}
             </div>
             <nav>
               <ul className={styles.nav_list}>
-                <li className={styles.nav_item}><Link to="/">Главная</Link></li>
-                <li className={styles.nav_item}><Link to="/aboutMe">О нас</Link></li>
-                <li className={styles.nav_item}><Link to="/news">Новости</Link></li>
-                <li className={styles.nav_item}><Link to="/members">Участники сообщества</Link></li>
-                <li className={styles.nav_item}><Link to="/projects">Проекты</Link></li>
+                <li className={styles.nav_item}><Link to="/">{t('footer.home')}</Link></li>
+                <li className={styles.nav_item}><Link to="/aboutMe">{t('footer.aboutUs')}</Link></li>
+                <li className={styles.nav_item}><Link to="/news">{t('footer.news')}</Link></li>
+                <li className={styles.nav_item}><Link to="/members">{t('footer.communityMembers')}</Link></li>
+                <li className={styles.nav_item}><Link to="/projects">{t('footer.projects')}</Link></li>
               </ul>
             </nav>
           </div>
 
           <div className={styles.third_col}>
-            <div className={styles.title}>Ресурсы</div>
+            <div className={styles.title}>
+              {t('footer.resources')}
+            </div>
             <nav>
               <ul className={styles.nav_list}>
-                <li className={styles.nav_item}><a href="">Открытые данные</a></li>
-                <li className={styles.nav_item}><a href="">Документация</a></li>
-                <li className={styles.nav_item}><a href="">API</a></li>
-                <li className={styles.nav_item}><a href="">Инструменты</a></li>
+                <li className={styles.nav_item}><a href="">{t('footer.openData')}</a></li>
+                <li className={styles.nav_item}><a href="">{t('footer.documentation')}</a></li>
+                <li className={styles.nav_item}><a href="">{t('footer.api')}</a></li>
+                <li className={styles.nav_item}><a href="">{t('footer.tools')}</a></li>
               </ul>
             </nav>
           </div>
 
           <div className={styles.fourth_col}>
-            <div className={styles.title}>Подписаться на новости</div>
+            <div className={styles.title}>
+              {t('footer.subscribe')}
+            </div>
             <div className={styles.user_ineraction}>
-              <input type="text" placeholder='Ваш email' />
+              <input type="text" placeholder={t('footer.emailPlaceholder')} />
               <button><img src="/mail.svg" alt="" /></button>
             </div>
           </div>
         </div>
         <div className={styles.lower_footer}>
-          <div className={styles.rights}>© 2024 OpenGov.kz. Все права защищены.</div>
+          <div className={styles.rights}>{t('footer.rights')}</div>
         </div>
       </div>
     </footer>

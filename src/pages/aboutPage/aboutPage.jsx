@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import Header from "../../header/header";
 import Footer from "../../footer/footer";
 import styles from "./aboutPage.module.css";
@@ -6,109 +7,106 @@ import AboutCard2 from "./aboutCard2/aboutCard2";
 import AboutCard3 from "./aboutCard3/aboutCard3";
 
 function AboutPage() {
+    const { t } = useTranslation('aboutPage');
+
     return (
         <>
             <Header />
             <div className={styles.first_block}>
                 <div className={styles.first_block_inner}>
-                    <div className={styles.title}>Открытые данные для будущего Казахстана</div>
-                    <div className={styles.description}>Развиваем экосистему открытых данных для прозрачного и инновационного будущего нашей страны</div>
+                    <div className={styles.title}>{t('aboutPage.openDataTitle')}</div>
+                    <div className={styles.description}>{t('aboutPage.openDataDescription')}</div>
                 </div>
             </div>
 
             <div className={styles.second_block}>
                 <div className={styles.second_block_inner}>
-                    <div className={styles.title}>
-                        Развитие открытых данных в Казахстане
-                    </div>
+                    <div className={styles.title}>{t('aboutPage.openDataDevelopment')}</div>
                     <div className={styles.cards}>
                         <AboutCard1
                             year="2015"
-                            title="Запуск инициативы"
-                            description="Принятие закона об открытых данных и запуск первых государственных порталов" />
+                            title={t('aboutPage.initiativeLaunch')}
+                            description={t('aboutPage.initiativeLaunchDescription')} />
                         <AboutCard1
                             year="2017"
-                            title="Расширение экосистемы"
-                            description="Интеграция новых источников данных и запуск образовательных программ" />
+                            title={t('aboutPage.ecosystemExpansion')}
+                            description={t('aboutPage.ecosystemExpansionDescription')} />
                         <AboutCard1
                             year="2019"
-                            title="Технологический прорыв"
-                            description="Внедрение современных технологий обработки и визуализации данных" />
+                            title={t('aboutPage.technologicalBreakthrough')}
+                            description={t('aboutPage.technologicalBreakthroughDescription')} />
                         <AboutCard1
                             year="2020"
-                            title="Международное сотрудничество"
-                            description="Присоединение к международным инициативам открытых данных" />
+                            title={t('aboutPage.internationalCooperation')}
+                            description={t('aboutPage.internationalCooperationDescription')} />
                         <AboutCard1
                             year="2022"
-                            title="Развитие инфраструктуры"
-                            description="Модернизация платформ и расширение доступности данных" />
+                            title={t('aboutPage.infrastructureDevelopment')}
+                            description={t('aboutPage.infrastructureDevelopmentDescription')} />
                         <AboutCard1
                             year="2024"
-                            title="Новые горизонты"
-                            description="Запуск инновационных проектов и расширение сферы применения открытых данных" />
+                            title={t('aboutPage.newHorizons')}
+                            description={t('aboutPage.newHorizonsDescription')} />
                     </div>
                 </div>
             </div>
 
             <div className={styles.third_block}>
                 <div className={styles.third_block_inner}>
-                    <div className={styles.title}>Ключевые платформы</div>
+                    <div className={styles.title}>{t('aboutPage.keyPlatforms')}</div>
                     <div className={styles.cards}>
                         <AboutCard2
                             imgSrc="/ap_Card1.svg"
                             title="opengov.kz"
-                            description="Национальный портал открытых данных с более чем 10,000 наборов данных" />
+                            description={t('aboutPage.platform1Description')} />
                         <AboutCard2
                             imgSrc="/ap_Card2.svg"
                             title="opengov.kz"
-                            description="Бюро национальной статистики с актуальными данными по всем секторам" />
+                            description={t('aboutPage.platform2Description')} />
                         <AboutCard2
                             imgSrc="/ap_Card3.svg"
                             title="opengov.kz"
-                            description="Финансовые и экономические показатели от Национального Банка" />
+                            description={t('aboutPage.platform3Description')} />
                     </div>
                 </div>
             </div>
 
             <div className={styles.fourth_block}>
                 <div className={styles.fourth_block_inner}>
-                    <div className={styles.title}>Законодательная база</div>
+                    <div className={styles.title}>{t('aboutPage.legislation')}</div>
                     <div className={styles.group}>
                         <div className={styles.left_side}>
-                            <div className={styles.description}>
-                                Деятельность в сфере открытых данных регулируется комплексом нормативных актов, обеспечивающих прозрачность и доступность информации:
-                            </div>
+                            <div className={styles.description}>{t('aboutPage.legislationDescription')}</div>
                             <ul className={styles.list}>
                                 <li className={styles.item}>
                                     <img src="/ap_Card1.svg" alt="" />
                                     <div className={styles.textGroup}>
-                                        <div className={styles.item_title}>Закон "Об открытых данных"</div>
-                                        <div className={styles.label}>Основополагающий документ, определяющий принципы работы с открытыми данными</div>
+                                        <div className={styles.item_title}>{t('aboutPage.lawTitle')}</div>
+                                        <div className={styles.label}>{t('aboutPage.lawDescription')}</div>
                                     </div>
                                 </li>
 
                                 <li className={styles.item}>
                                     <img src="/ap_Card1.svg" alt="" />
                                     <div className={styles.textGroup}>
-                                        <div className={styles.item_title}>Постановление о порядке публикации</div>
-                                        <div className={styles.label}>Регламентирует процедуры размещения и обновления данных</div>
+                                        <div className={styles.item_title}>{t('aboutPage.resolutionTitle')}</div>
+                                        <div className={styles.label}>{t('aboutPage.resolutionDescription')}</div>
                                     </div>
                                 </li>
 
                                 <li className={styles.item}>
                                     <img src="/ap_Card1.svg" alt="" />
                                     <div className={styles.textGroup}>
-                                        <div className={styles.item_title}>Требования к форматам данных</div>
-                                        <div className={styles.label}>Устанавливает стандарты форматов и структуры публикуемых данных</div>
+                                        <div className={styles.item_title}>{t('aboutPage.dataFormatRequirementsTitle')}</div>
+                                        <div className={styles.label}>{t('aboutPage.dataFormatRequirementsDescription')}</div>
                                     </div>
                                 </li>
-
                             </ul>
                         </div>
                         <div className={styles.right_side}>
-                            <div className={styles.right_title}>Структура регулирования</div>
+                            <div className={styles.right_title}>{t('aboutPage.regulationStructureTitle')}</div>
                             <img src="/aboutPage_2.png" alt="" />
-                            <div className={styles.description}>Многоуровневая система регулирования обеспечивает эффективное функционирование экосистемы открытых данных</div>
+                            <div className={styles.description}>{t('aboutPage.regulationStructureDescription')}</div>
                         </div>
                     </div>
                 </div>
@@ -116,31 +114,31 @@ function AboutPage() {
 
             <div className={styles.fifth_block}>
                 <div className={styles.fifth_block_inner}>
-                    <div className={styles.title}>Примеры успешного использования</div>
+                    <div className={styles.title}>{t('aboutPage.successExamples')}</div>
                     <div className={styles.cards}>
                         <AboutCard3
                             imgSrc="/ap_Card4.png"
                             tag="Данные"
-                            title="Открытые базы данных"
-                            description="Создание общедоступных информационных ресурсов"
+                            title={t('aboutPage.openDatabaseTitle')}
+                            description={t('aboutPage.openDatabaseDescription')}
                             link="/projectDetail" />
                         <AboutCard3
                             imgSrc="/ap_Card5.png"
                             tag="Образование"
-                            title="Цифровые школы"
-                            description="Анализ образовательных данных для улучшения качества обучения"
+                            title={t('aboutPage.digitalSchoolsTitle')}
+                            description={t('aboutPage.digitalSchoolsDescription')}
                             link="/projectDetail" />
                         <AboutCard3
                             imgSrc="/ap_Card6.png"
                             tag="Бизнес"
-                            title="Развитие предпринимательства"
-                            description="Использование открытых данных для развития малого и среднего бизнеса"
+                            title={t('aboutPage.businessDevelopmentTitle')}
+                            description={t('aboutPage.businessDevelopmentDescription')}
                             link="/projectDetail" />
                         <AboutCard3
                             imgSrc="/ap_Card7.png"
                             tag="Экология"
-                            title="Мониторинг окружающей среды"
-                            description="Анализ экологических данных для улучшения качества воздуха"
+                            title={t('aboutPage.environmentMonitoringTitle')}
+                            description={t('aboutPage.environmentMonitoringDescription')}
                             link="/projectDetail" />
                     </div>
                 </div>
@@ -149,32 +147,32 @@ function AboutPage() {
             <div className={styles.sixth_block}>
                 <div className={styles.sixth_block_inner}>
                     <div className={styles.left_side}>
-                        <div className={styles.title}>Роль OpenGov.kz в экосистеме открытых данных</div>
+                        <div className={styles.title}>{t('aboutPage.opengovRoleTitle')}</div>
                         <div className={styles.group}>
-                            <div className={styles.description}>OpenGov.kz является ключевым звеном в развитии экосистемы открытых данных Казахстана, обеспечивая:</div>
+                            <div className={styles.description}>{t('aboutPage.opengovRoleDescription')}</div>
                             <ul className={styles.list}>
 
                                 <li className={styles.item}>
                                     <img src="/aboutPage_3.svg" alt="" />
                                     <div className={styles.textGroup}>
-                                        <div className={styles.item_title}>Доступ к данным</div>
-                                        <div className={styles.label}>Предоставление удобного доступа к государственным данным</div>
+                                        <div className={styles.item_title}>{t('aboutPage.dataAccessTitle')}</div>
+                                        <div className={styles.label}>{t('aboutPage.dataAccessDescription')}</div>
                                     </div>
                                 </li>
 
                                 <li className={styles.item}>
                                     <img src="/aboutPage_4.svg" alt="" />
                                     <div className={styles.textGroup}>
-                                        <div className={styles.item_title}>Сообщество</div>
-                                        <div className={styles.label}>Развитие сообщества разработчиков и исследователей</div>
+                                        <div className={styles.item_title}>{t('aboutPage.communityTitle')}</div>
+                                        <div className={styles.label}>{t('aboutPage.communityDescription')}</div>
                                     </div>
                                 </li>
 
                                 <li className={styles.item}>
                                     <img src="/aboutPage_5.svg" alt="" />
                                     <div className={styles.textGroup}>
-                                        <div className={styles.item_title}>Инновации</div>
-                                        <div className={styles.label}>Поддержка инновационных проектов на основе открытых данных</div>
+                                        <div className={styles.item_title}>{t('aboutPage.innovationsTitle')}</div>
+                                        <div className={styles.label}>{t('aboutPage.innovationsDescription')}</div>
                                     </div>
                                 </li>
                             </ul>
@@ -183,19 +181,19 @@ function AboutPage() {
                     <div className={styles.right_side}>
                         <div className={styles.card}>
                             <div className={styles.number}>10K+</div>
-                            <div className={styles.text}>Наборов данных</div>
+                            <div className={styles.text}>{t('aboutPage.dataSets')}</div>
                         </div>
                         <div className={styles.card}>
                             <div className={styles.number}>500+</div>
-                            <div className={styles.text}>Активных пользователей</div>
+                            <div className={styles.text}>{t('aboutPage.activeUsers')}</div>
                         </div>
                         <div className={styles.card}>
                             <div className={styles.number}>100+</div>
-                            <div className={styles.text}>Реализованных проектов</div>
+                            <div className={styles.text}>{t('aboutPage.projectsCompleted')}</div>
                         </div>
                         <div className={styles.card}>
                             <div className={styles.number}>50+</div>
-                            <div className={styles.text}>Партнёров</div>
+                            <div className={styles.text}>{t('aboutPage.partners')}</div>
                         </div>
                     </div>
                 </div>
